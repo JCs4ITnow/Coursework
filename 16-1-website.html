@@ -4,15 +4,15 @@
 </head>
 <title>National Astronomers Association</title>
 <body>
-  <form id="personalDetails" action="filename.asp">
-    First name: <input type="text" name="firstname"><br>
-    Surname: <input type="text" name="surname"><br>
-    Email: <input type="text" name="email"><br>
+  <form id="personalDetails" >
+    First name: <input type="text" name="firstname" required><br>
+    Surname: <input type="text" name="surname" required><br>
+    Email: <input type="text" name="email" required><br>
     Home Address:<br>
-    <textarea rows="5" cols="30" name="address">
+    <textarea rows="5" cols="30" name="address" required>
 </textarea>
       <br>
-      <select>
+      <select required>
         <option value="None">Please Select Your Country</option>
         <option value="england">England</option>
         <option value="wales">Wales</option>
