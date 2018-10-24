@@ -4,7 +4,7 @@
 </head>
 <title>National Astronomers Association</title>
 <body>
-  <form id="personalDetails" >
+  <form id="personalDetails" action="filename.asp">
     First name: <input type="text" name="firstname" required><br>
     Surname: <input type="text" name="surname" required><br>
     Email: <input type="text" name="email" required><br>
@@ -22,6 +22,21 @@
       <br>
     <input type="submit" value="Submit">
     <input type="button" onclick="resetFunction()" value="Reset Form">
+  </form>
+  <br>
+  <p>Please Let us know in which country of the British Isles you have been using your telescope!</p>
+  <form>
+    <textarea rows="5" cols="30" name="address" required>
+</textarea>
+      <br>
+      <select required>
+        <option value="None">Please Select Your Country</option>
+        <option value="england">England</option>
+        <option value="wales">Wales</option>
+        <option value="scotland">Scotland</option>
+        <option value="northernIreland">Northern Ireland</option>
+      </select>
+      <br>
   </form>
   <br>
   <p>Please Let us know which of these planets you have seen using your telescope!</p>
