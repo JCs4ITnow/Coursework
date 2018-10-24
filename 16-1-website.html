@@ -4,7 +4,7 @@
 </head>
 <title>National Astronomers Association</title>
 <body>
-  <form id="personalDetails" action="filename.asp">
+<form id="personalDetails" onsubmit="return validateForm()" method="post" action="mailto:jc_harrison86@hotmail.com" enctype="text/plain">
     First name: <input type="text" name="firstname" required><br>
     Surname: <input type="text" name="surname" required><br>
     Email: <input type="text" name="email" required><br>
@@ -12,24 +12,14 @@
     <textarea rows="5" cols="30" name="address" required>
 </textarea>
       <br>
-      <select required>
-        <option value="None">Please Select Your Country</option>
-        <option value="england">England</option>
-        <option value="wales">Wales</option>
-        <option value="scotland">Scotland</option>
-        <option value="northernIreland">Northern Ireland</option>
-      </select>
-      <br>
-    <input type="submit" value="Submit">
-    <input type="button" onclick="resetFunction()" value="Reset Form">
-  </form>
+  <input type="submit" value="Submit">
+  <input type="button" onclick="resetFunction()" value="Reset Form">
+</form>
   <br>
-  <p>Please Let us know in which country of the British Isles you have been using your telescope!</p>
+<p>Please Let us know in which country of the British Isles you have been using your telescope!</p>
   <form>
-    <textarea rows="5" cols="30" name="address" required>
-</textarea>
-      <br>
-      <select required>
+        <br>
+      <select>
         <option value="None">Please Select Your Country</option>
         <option value="england">England</option>
         <option value="wales">Wales</option>
