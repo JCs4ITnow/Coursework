@@ -4,12 +4,34 @@
 <a id="setAnchor"> Click here to go to www.bbc.co.uk</a>
 <P>Click on the button to change the href attribute of the element to "www.bbc.co.uk"</p>
   <button onclick="setHrefAttribute()">Click Here</button>
+<p>Click on this button to remove the href attribute.
+  <button onclick="removeHrefAttribute()">Click Here</button>
+<br>
+  <button onclick="getLocation()">Get My Longitude and Latitude</button>
 
+  <p id="Position"></p>
 <script>
 function setHrefAttribute()
 {
   document.getElementById("setAnchor").setAttribute("href","http://www.bbc.co.uk");
 }
+function removeHrefAttribute()
+{
+  document.getElementById("setAnchor").removeAttribute("href","http://www.bbc.co.uk");
+}
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById("Position").innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("Position").innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+console.log(geoLocationFunction)
 </script>
 
 </body>
