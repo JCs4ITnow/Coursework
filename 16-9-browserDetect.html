@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <p> Click the button to determine the browser being used</p>
+  <button onclick="browserDetectionFunction()">Click Here!</button>
+  <p id="demoBrowserDetection"></p>
+<script>
+function browserDetectionFunction()
+{
+  document.getElementById("demoBrowserDetection").innerHTML =
+"Name is " + navigator.appName +
+"<br>Code name is " + navigator.appCodeName;
+}
+</script>
+</body>
+</html>
