@@ -7,9 +7,13 @@
 <p>Click on this button to remove the href attribute.
   <button onclick="removeHrefAttribute()">Click Here</button>
 <br>
-  <button onclick="getLocation()">Get My Longitude and Latitude</button>
+<p>Click the button to demonstrate the innerHTML method</p>
+<button onclick="historyExample()">Click Here for History</button>
+<p id="historyLength"></p>
 
-  <p id="Position"></p>
+<img id="unicornGif" src="Unicorn-gif-17.gif">
+<br>
+<button onclick="setSize()">Click here to introduce and set size attributes to the image.</button>
 <script>
 function setHrefAttribute()
 {
@@ -19,19 +23,16 @@ function removeHrefAttribute()
 {
   document.getElementById("setAnchor").removeAttribute("href","http://www.bbc.co.uk");
 }
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        document.getElementById("Position").innerHTML = "Geolocation is not supported by this browser.";
-    }
+function historyExample()
+{
+var websites = history.length;<!--Use the history object-->
+document.getElementById("historyLength").innerHTML = websites;
 }
-
-function showPosition(position) {
-    document.getElementById("Position").innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
+function setSize()
+{
+document.getElementById("unicornGif").setAttribute("height","100px");
+document.getElementById("unicornGif").setAttribute("width","130px")
 }
-console.log(geoLocationFunction)
 </script>
 
 </body>
